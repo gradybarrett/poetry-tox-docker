@@ -1,13 +1,8 @@
 FROM pyenv-poetry:1.0
 
-ARG pyversions="3.6.5 3.7.10 3.8.10 3.9.5"
+ARG PYTHON_VERSIONS="3.6.5 3.7.10 3.8.10 3.9.5"
 
-RUN for version in $pyversions; do pyenv install $version; done
+RUN for version in $PYTHON_VERSIONS; do pyenv install $version; done && pyenv global $PYTHON_VERSIONS
 
-RUN pyenv global $pyversions
-
-# COPY . /opt/lib
-
-# WORKDIR /opt/lib
-
-# RUN poetry --version
+ENTRYPOINT ["/bin/sh", "-l"]
+CMD []
