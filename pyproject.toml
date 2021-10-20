@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "poetry-test"
+name = "poetry-tox-docker"
 version = "0.1.0"
 description = ""
 authors = ["Grady Barrett <Grady.Barrett@Gmail.com>"]
