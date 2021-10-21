@@ -1,4 +1,4 @@
-from poetry_test import __version__
+from poetry_tox_docker import __version__
 
 
 def test_version():

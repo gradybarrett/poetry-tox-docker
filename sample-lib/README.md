@@ -1,0 +1,1 @@
+A sample python library managed with poetry and tested against multiple python versions using tox.
