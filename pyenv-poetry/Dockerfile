@@ -27,5 +27,4 @@ RUN update-ca-certificates && apt-get update && apt-get install --no-install-rec
 
 ENV PATH "$HOME/.local/bin:$HOME/.pyenv/bin:$PATH"
 
-ENTRYPOINT ["/bin/sh", "-l"]
-CMD []
+CMD ["/bin/sh"]
