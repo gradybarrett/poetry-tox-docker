@@ -1,4 +1,4 @@
-FROM pyenv-poetry:1.0
+FROM pyenv-poetry:2.0
 
 ONBUILD ARG PYTHON_VERSIONS_DEFAULT
 
@@ -8,5 +8,4 @@ ONBUILD ARG PYTHON_GLOBAL_VERSIONS=${PYTHON_GLOBAL_VERSIONS_DEFAULT:-$PYTHON_VER
 
 ONBUILD RUN for version in $PYTHON_VERSIONS; do pyenv install $version; done && pyenv global $PYTHON_GLOBAL_VERSIONS
 
-ONBUILD ENTRYPOINT ["/bin/sh", "-l"]
-ONBUILD CMD []
+ONBUILD CMD ["/bin/sh"]
