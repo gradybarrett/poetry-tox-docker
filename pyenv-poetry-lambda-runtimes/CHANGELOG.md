@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0] - 2021-10-22
+
+### Removed
+
+- ENTRYPOINT to make the image more flexible
+
+### Changed
+
+- CMD to /bin/sh
+
 ## [1.1] - 2021-10-20
 
 ### Changed
@@ -19,5 +29,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Base image
 
 [Unreleased]: https://github.com/gradybarrett/poetry-tox-docker/compare/pyenv-poetry-lambda-runtimesv1.1...HEAD
+[2.0]: https://github.com/gradybarrett/poetry-tox-docker/compare/pyenv-poetry-lambda-runtimesv1.1...pyenv-poetry-lambda-runtimesv2.0
 [1.1]: https://github.com/gradybarrett/poetry-tox-docker/compare/pyenv-poetry-lambda-runtimesv1.0...pyenv-poetry-lambda-runtimesv1.1
 [1.0]: https://github.com/gradybarrett/poetry-tox-docker/releases/tag/pyenv-poetry-lambda-runtimesv1.0
