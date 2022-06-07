@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1] - 2022-06-06
+
+### Changed
+
+- Reference latest pyenv-poetry image
+
 ## [2.0] - 2021-10-22
 
 ### Removed
