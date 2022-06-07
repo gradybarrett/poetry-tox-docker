@@ -1,4 +1,4 @@
-FROM python:3.6-slim
+FROM python:3.7-slim
 
 ENV HOME=/usr/local
 
@@ -21,10 +21,15 @@ RUN update-ca-certificates && apt-get update && apt-get install --no-install-rec
     tk-dev \
     xz-utils \
     zlib1g-dev \
-    && curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python \
     && curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash \
+    && curl -sSL https://install.python-poetry.org | python - --preview \
     && rm -rf /var/lib/apt/lists/*
 
 ENV PATH "$HOME/.local/bin:$HOME/.pyenv/bin:$PATH"
+
+RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+RUN echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+RUN echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+RUN echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 
 CMD ["/bin/sh"]
