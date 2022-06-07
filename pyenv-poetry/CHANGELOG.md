@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [2.1] - 2022-06-06
+
+### Added
+
+- setup scripts for pyenv
+- latest poetry version to solve problem of poetry not using active python version
+
 ## [2.0] - 2021-10-22
 
 ### Removed
